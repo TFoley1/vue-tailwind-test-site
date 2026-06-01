@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue + Tailwind Playground</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_drop_down" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tailwind-border-gradients@1.1.2/plugin.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script defer src="script.js"></script>
+    
+</head>
+<body>
+    <!-- bg-linear-30 from-[b26eff] to-[54d5b8] -->
+    <div class="overflow-hidden md:overflow-auto" id="app">
+        <navbar-dropdown
+        
+        >
+        </navbar-dropdown>
+
+        <hero-section
+            title="Amazing Product Here, You Should Buy It."
+            img_src="img/product.png"
+        ></hero-section>        
+
+        <div class="m-20">
+            <div class="flex items-center justify-center pt-14 ">
+                <h1 class="text-4xl text-center">Newest & Best</h1>
+            </div>
+        
+            <div class="grid place-items-center mx-10 my-20 md:flex md:items-center md:justify-center md:gap-10"> <!--flex items-center justify-center gap-10 -->
+
+                <feature-card
+                    title="Fast"
+                    description="Lorem ipsum dolor sit amet."
+                ></feature-card>
+
+                <feature-card
+                    title="Reliable"
+                    description="Etiam vel urna vestibulum."
+                ></feature-card>
+
+                <feature-card
+                    title="Affordable"
+                    description="Vehicula mi consectetur."
+                ></feature-card>
+            </div>
+        </div>    
+
+        <layout-section bg-color="bg-white text-neutral-950">
+    
+            <div class="max-w-xl text-center md:text-left">
+                <p class="text-2xl mb-4">
+                    Buy our product that you'll love for years and years.
+                </p>
+                <p class="text-muted text-lg">
+                    Sign up for our newsletter too, why not!
+                </p>
+            </div>
+
+            <div>
+                <my-button text="Buy Now!" href="#products"></my-button>
+            </div>
+
+        </layout-section>
+        
+
+
+        <!-- <span class="bg-[#e088f1]">Badge!</span> -->
+
+        <!-- <span class="bg-[#30e8bf]">Badge!</span> -->
+
+        <layout-section class="flex flex-wrap justify-center p-10 bg-[#222]" bg-color="bg-[#222] text-white">
+            <preview-card 
+                title="Mauris imperdiet" 
+                description="Etiam vel urna vestibulum."
+                img-src="img/city-art2.png"
+                :badges="mountainBadges" 
+            >
+            <new-button 
+                text="View" 
+                href="#button" 
+                custom-class="hover:bg-[#e088f1] shadow-lg hover:shadow-[#e088f1] hover:shadow-opacity-50">
+            </new-button>
+            </preview-card>
+
+            <preview-card 
+                title=" Pellentesque tristique" 
+                description="Lorem ipsum dolor sit amet."
+                img-src="img/mountain-art.png"
+                :badges="cityBadges"
+            >
+            <new-button 
+                text="View" 
+                href="#button" 
+                custom-class="hover:bg-[#e088f1] shadow-lg hover:shadow-[#e088f1] hover:shadow-opacity-50">
+            </new-button>
+            </preview-card>
+
+            <blurred-bg-card 
+                title="Aenean vitae" 
+                description=" Sed accumsan et leo ut egestas. Ut in est nibh. Etiam gravida ultricies neque, non vehicula elit tincidunt ac. "
+                img-src="img/neon-city.png"
+            ></blurred-bg-card>
+            
+            <blurred-bg-card 
+                title=" Aenean vitae" 
+                description=" Sed accumsan et leo ut egestas. Ut in est nibh. Etiam gravida ultricies neque, non vehicula elit tincidunt ac. "
+                img-src="img/city-art.png"
+            ></blurred-bg-card>
+        </layout-section>
+
+        
+        
+       
+        <my-footer></my-footer>
+     </div>
+</body>
+</html>

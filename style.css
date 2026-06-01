@@ -1,0 +1,38 @@
+body {
+    background-color: #111;
+    color:whitesmoke;
+    font-family: sora, bold, sans-serif;
+    font-weight: 800;
+}
+
+h1,h2,h3 {
+    font-weight: 800;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+nav ul li {
+    transition: .4s;
+}
+
+nav ul li svg {
+    transition: .2s;
+}
+
+
+.menu-enter-active,
+.menu-leave-active {
+    transition: all 0.35s ease;
+}
+
+.menu-enter-from,
+.menu-leave-to {
+    opacity: 0;
+    transform: translateY(-100%);
+}
