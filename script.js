@@ -237,12 +237,14 @@ const Footer = {
         }
     },
     template: `
-        <div class="grid 
+        <div class="
             place-items-center 
             w-full 
             bg-neutral-900 
             p-15
             
+            px-4
+            md:grid 
             md:grid 
             md:grid-cols-2
          "> 
@@ -254,12 +256,12 @@ const Footer = {
             <div class="grid place-items-center py-4">
                 <!-- SOCIALS -->
                 <div class="flex items-center justify-center py-8">
-                    <a v-for="link in socialLinks" :key="link.text" :href="link.href" class="px-1  flex items-center justify-center cursor-pointer"><img class="rounded-3xl w-12" :src="link.src"></a>
+                    <a v-for="link in socialLinks" :key="link.text" :href="link.href" class="px-1 cursor-pointer"><img class="rounded-3xl md:w-12 w-8" :src="link.src"></a>
                 </div>
 
                 <!-- LINKS-->
                 <div class="flex items-center justify-center">
-                    <a v-for="link in links" :key="link.text" :href="link.href" class="px-2 text-sm cursor-pointer hover:text-violet-300">{{ link.text}}</a>
+                    <a v-for="link in links" :key="link.text" :href="link.href" class="px-2 text-sm cursor-pointer hover:text-violet-300">{{ link.text }}</a>
                 </div>
             </div>
         </div>
