@@ -97,7 +97,7 @@ const NavBar = {
 
         <ul class="block md:hidden md:size-12 px-2 py-2 text-right  ">
             <li class="select-none inline absolute left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center text-xl px-2 text-center"><span class="text-center"><a href="index.html">Vue + Tailwind</a></span></li>
-            <li @click="toggleMenu" class="absolute right-10 -translate-x-1/2 -translate-y-1/2  inline mx-auto"><button><svg class="inline size-12 hover:bg-sky-500/40" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"></path></svg></button></li>
+            <li @click="toggleMenu" class="absolute md:right-10 right-1 -translate-x-1/2 -translate-y-1/2  inline mx-auto"><button><svg class="inline size-12 hover:bg-sky-500/40" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"></path></svg></button></li>
         </ul>
         </nav>
         </div>
@@ -110,7 +110,7 @@ const NavBar = {
             class="flex flex-col justify-evenly fixed inset-0 z-50 w-screen h-screen overflow-y-auto bg-linear-30 from-[#b26eff] to-[#54d5b8] 
             ">
                 <ul class="text-center text-5xl divide-y-4 rounded-3xl">
-                    <button @click="toggleMenu" class="absolute top-2 right-8 text-white hover:text-gray-600">
+                    <button @click="toggleMenu" class="absolute top-2 right-4 text-white hover:text-gray-600">
                         <svg class="size-14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>
@@ -246,15 +246,15 @@ const Footer = {
             md:grid 
             md:grid-cols-2
          "> 
-            <div class="py-4">
-                <h1 class="text-2xl py-4 ">Vue + Tailwind Example</h1>
-                <a v-for="link in largeLinks" :key="link.text" :href="link.href" class="px-4 text-lg cursor-pointer hover:text-violet-300">{{ link.text}}</a>
+            <div class="text-center md:text-2xl sm:text-lg py-4">
+                <h1 class=" py-4 ">Vue + Tailwind Example</h1>
+                <a v-for="link in largeLinks" :key="link.text" :href="link.href" class="px-4 cursor-pointer hover:text-violet-300">{{ link.text}}</a>
             </div>
 
             <div class="grid place-items-center py-4">
                 <!-- SOCIALS -->
-                <div class="flex items-center justify-center py-8 ">
-                    <a v-for="link in socialLinks" :key="link.text" :href="link.href" class="px-1 cursor-pointer"><img class="rounded-4xl w-14" :src="link.src"></a>
+                <div class="flex items-center justify-center py-8">
+                    <a v-for="link in socialLinks" :key="link.text" :href="link.href" class="px-1  flex items-center justify-center cursor-pointer"><img class="rounded-3xl w-12" :src="link.src"></a>
                 </div>
 
                 <!-- LINKS-->
